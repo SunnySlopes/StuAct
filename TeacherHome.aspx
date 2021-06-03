@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>教师管理首页</title>
+    <title>教师/管理首页</title>
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -45,7 +45,7 @@
                     <div class="row align-items-center">
 
                         <div class="col-6 col-lg-2">
-                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发技术</a></h1>
+                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发课程大作业</a></h1>
                         </div>
 
                         <div class="col-12 col-md-10 d-none d-lg-block">
@@ -54,9 +54,9 @@
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                     <li><a href="TeacherHome.aspx" class="nav-link">主页</a></li>
                                     <li><a href="StuManage.aspx" class="nav-link">账号管理</a></li>
-                                    <li><a href="ActManage.aspx" class="nav-link">活动管理</a></li>
-                                    <li><a href="Score.aspx" class="nav-link">活动评分</a></li>
-                                    <li><a href="Tongji.aspx" class="nav-link">统计</a></li>
+                                    <li><a href="ActManage.aspx" class="nav-link">作业管理</a></li>
+                                    <li><a href="Score.aspx" class="nav-link">作业评分</a></li>
+                                    <li><a href="Tongji.aspx" class="nav-link">统计信息</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -94,7 +94,7 @@
                             <div class="col-12">
                                 <div class="row justify-content-center">
                                     <div class="col-md-7 text-center hero-text">
-                                        <h1 data-aos="fade-up" data-aos-delay="">学生活动管理系统</h1>
+                                        <h1 data-aos="fade-up" data-aos-delay="">教师主页 </h1>
                                         <p class="mb-5" data-aos="fade-up" data-aos-delay="100" id="TeaName" runat="server">欢迎您，123！</p>
                                         <asp:Button ID="Button1" runat="server" OnClick="Logout" Text="退出" />
                                     </div>
@@ -118,7 +118,7 @@
                                         <img src="img/img_1.jpg" alt="Image" class="img-fluid" />
                                     </a>
                                     <div class="post-text">
-                                        <h3><a href="StuManage.aspx">账号管理</a></h3>
+                                        <h3><a href="StuManage.aspx">&nbsp;&nbsp;账号管理</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                         <img src="img/img_2.jpg" alt="Image" class="img-fluid" />
                                     </a>
                                     <div class="post-text">
-                                        <h3><a href="ActManage.aspx">活动管理</a></h3>
+                                        <h3><a href="ActManage.aspx">&nbsp;&nbsp;作业管理</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                         <img src="img/img_3.jpg" alt="Image" class="img-fluid" />
                                     </a>
                                     <div class="post-text">
-                                        <h3><a href="Score.aspx">活动评分</a></h3>
+                                        <h3><a href="Score.aspx">&nbsp;&nbsp;作业评分</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
                                         <img src="img/img_4.jpg" alt="Image" class="img-fluid" />
                                     </a>
                                     <div class="post-text">
-                                        <h3><a href="Tongji.aspx">统计</a></h3>
+                                        <h3><a href="Tongji.aspx">&nbsp;&nbsp;统计信息</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -165,7 +165,7 @@
 
                     <div class="row justify-content-center text-center">
                         <div class="col-md-7">
-                            <p class="copyright">Copyright &copy; 2020. Zfz. All rights reserved.</p>
+                            <p class="copyright">Copyright © 2021 SunnySlopes. All Rights Reserved.</p>
                             <div class="credits">
                             </div>
                         </div>

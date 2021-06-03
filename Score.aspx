@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>活动评分</title>
+    <title>作业评分</title>
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
@@ -45,7 +45,7 @@
                     <div class="row align-items-center">
 
                         <div class="col-6 col-lg-2">
-                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发技术</a></h1>
+                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发课程大作业</a></h1>
                         </div>
 
                         <div class="col-12 col-md-10 d-none d-lg-block">
@@ -54,9 +54,9 @@
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                     <li><a href="TeacherHome.aspx" class="nav-link">主页</a></li>
                                     <li><a href="StuManage.aspx" class="nav-link">账号管理</a></li>
-                                    <li><a href="ActManage.aspx" class="nav-link">活动管理</a></li>
-                                    <li><a href="Score.aspx" class="nav-link">活动评分</a></li>
-                                    <li><a href="Tongji.aspx" class="nav-link">统计</a></li>
+                                    <li><a href="ActManage.aspx" class="nav-link">作业管理</a></li>
+                                    <li><a href="Score.aspx" class="nav-link">作业评分</a></li>
+                                    <li><a href="Tongji.aspx" class="nav-link">统计信息</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -94,7 +94,7 @@
                             <div class="col-12">
                                 <div class="row justify-content-center">
                                     <div class="col-md-7 text-center hero-text">
-                                        <h1 data-aos="fade-up" data-aos-delay="">学生活动管理系统</h1>
+                                        <h1 data-aos="fade-up" data-aos-delay="">作业评分</h1>
                                         <p class="mb-5" data-aos="fade-up" data-aos-delay="100" id="TeaName" runat="server">欢迎您，123！</p>
                                         <asp:Button ID="Button1" runat="server" OnClick="Logout" Text="退出" />
                                     </div>
@@ -128,7 +128,7 @@
                             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ActManageConnectionString %>" SelectCommand="SELECT [act_id], [stu_id], [score], [memo] FROM [Detail] ORDER BY [act_id], [stu_id]"></asp:SqlDataSource>
                             <table class="table table-striped table-bordered table-hover">
                                 <tr>
-                                    <td>选择活动</td>
+                                    <td>选择作业</td>
                                     <td>
                                         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="act_name" DataValueField="act_id">
                                         </asp:DropDownList>
@@ -161,33 +161,23 @@
                             <br />
                             <div class="container">
                                 <div class="row mb-5">
-                                    <div class="col-md-4">
-                                        <h5>活动信息</h5>
+                                    <div class="col-md-6">
+                                        <h5>现有作业信息</h5>
                                         <br />
                                         <asp:GridView ID="GridView1" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="act_id" DataSourceID="SqlDataSource1">
                                             <Columns>
-                                                <asp:BoundField DataField="act_id" HeaderText="活动编号" InsertVisible="False" ReadOnly="True" SortExpression="act_id" />
-                                                <asp:BoundField DataField="type" HeaderText="活动类型" SortExpression="type" />
-                                                <asp:BoundField DataField="act_name" HeaderText="活动名称" SortExpression="act_name" />
+                                                <asp:BoundField DataField="act_id" HeaderText="作业编号" InsertVisible="False" ReadOnly="True" SortExpression="act_id" />
+                                                <asp:BoundField DataField="type" HeaderText="作业类型" SortExpression="type" />
+                                                <asp:BoundField DataField="act_name" HeaderText="作业名称" SortExpression="act_name" />
                                             </Columns>
                                         </asp:GridView>
                                     </div>
-                                    <div class="col-md-4">
-                                        <h5>学生信息</h5>
+                                    <div class="col-md-6">
+                                        <h5>现有作业评分</h5>
                                         <br />
-                                        <asp:GridView ID="GridView2" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataKeyNames="stu_id" DataSourceID="SqlDataSource2">
+                                        <asp:GridView ID="GridView2" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3">
                                             <Columns>
-                                                <asp:BoundField DataField="stu_id" HeaderText="学号" ReadOnly="True" SortExpression="stu_id" />
-                                                <asp:BoundField DataField="stu_name" HeaderText="姓名" SortExpression="stu_name" />
-                                            </Columns>
-                                        </asp:GridView>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5>活动评分</h5>
-                                        <br />
-                                        <asp:GridView ID="GridView3" CssClass="table table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3">
-                                            <Columns>
-                                                <asp:BoundField DataField="act_id" HeaderText="活动编号" SortExpression="act_id" />
+                                                <asp:BoundField DataField="act_id" HeaderText="作业编号" SortExpression="act_id" />
                                                 <asp:BoundField DataField="stu_id" HeaderText="学号" SortExpression="stu_id" />
                                                 <asp:BoundField DataField="score" HeaderText="分数" SortExpression="score" />
                                                 <asp:BoundField DataField="memo" HeaderText="备注" SortExpression="memo" />
@@ -211,7 +201,7 @@
 
                     <div class="row justify-content-center text-center">
                         <div class="col-md-7">
-                            <p class="copyright">Copyright &copy; 2020. Zfz. All rights reserved.</p>
+                            <p class="copyright">Copyright © 2021 SunnySlopes. All Rights Reserved.</p>
                             <div class="credits">
                             </div>
                         </div>

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
         content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>学生活动管理系统</title>
+    <title>学生作业管理系统</title>
     <style>
         * {
             padding: 0;
@@ -234,7 +234,7 @@
             <div class="login-wrap">
                 <div class="layout-center">
                     <div class="center-session">
-                        <label class="header-title">学生活动管理系统</label>
+                        <label class="header-title">学生作业管理系统</label>
                         <form id="form1" runat="server">
                             <div class="input-item">
                                 <i class="login-icon loginname-icon"></i>
@@ -247,8 +247,8 @@
                             <br />
                             <div>
                                 <input id="Radio1" type="radio" name="sf" value="xs" runat="server" />学生
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input id="Radio2" type="radio" name="sf" value="js" runat="server" />教师
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input id="Radio2" type="radio" name="sf" value="js" runat="server" />教师/管理员
                             </div>
                             <p class="showMessage" id="jieguo" runat="server">
                             </p>
@@ -265,7 +265,7 @@
                 <div class="layout-center">
 
                     <div class="footer-cp">Web开发课程大作业</div>
-                    <div class="footer-cp">Copyright © 2020 Zfz. All Rights Reserved.</div>
+                    <div class="footer-cp">Copyright © 2021 SunnySlopes. All Rights Reserved.</div>
                 </div>
             </div>
         </div>

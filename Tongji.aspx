@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>统计</title>
+    <title>统计信息</title>
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -45,7 +45,7 @@
                     <div class="row align-items-center">
 
                         <div class="col-6 col-lg-2">
-                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发技术</a></h1>
+                            <h1 class="mb-0 site-logo"><a href="TeacherHome.aspx" class="mb-0">Web开发课程大作业</a></h1>
                         </div>
 
                         <div class="col-12 col-md-10 d-none d-lg-block">
@@ -54,9 +54,9 @@
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                                     <li><a href="TeacherHome.aspx" class="nav-link">主页</a></li>
                                     <li><a href="StuManage.aspx" class="nav-link">账号管理</a></li>
-                                    <li><a href="ActManage.aspx" class="nav-link">活动管理</a></li>
-                                    <li><a href="Score.aspx" class="nav-link">活动评分</a></li>
-                                    <li><a href="Tongji.aspx" class="nav-link">统计</a></li>
+                                    <li><a href="ActManage.aspx" class="nav-link">作业管理</a></li>
+                                    <li><a href="Score.aspx" class="nav-link">作业评分</a></li>
+                                    <li><a href="Tongji.aspx" class="nav-link">统计信息</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -94,7 +94,7 @@
                             <div class="col-12">
                                 <div class="row justify-content-center">
                                     <div class="col-md-7 text-center hero-text">
-                                        <h1 data-aos="fade-up" data-aos-delay="">学生活动管理系统</h1>
+                                        <h1 data-aos="fade-up" data-aos-delay="">统计信息</h1>
                                         <p class="mb-5" data-aos="fade-up" data-aos-delay="100" id="TeaName" runat="server">欢迎您，123！</p>
                                         <asp:Button ID="Button1" runat="server" OnClick="Logout" Text="退出" />
                                     </div>
@@ -107,39 +107,40 @@
 
                 <div class="site-section">
                     <div class="container">
+                        <h3>查询</h3>
+                            <table class="table table-striped table-bordered table-hover">
+                                <tr>
+                                    <td>按学生查询</td>
+                                    <td>按作业查询</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="stu_name" DataValueField="stu_id"></asp:DropDownList>
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ActManageConnectionString %>" SelectCommand="SELECT * FROM [Stu]"></asp:SqlDataSource>
+                                        <asp:Button ID="Button2" runat="server" Text="查询" OnClick="Button2_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="act_name" DataValueField="act_id"></asp:DropDownList>
+                                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ActManageConnectionString %>" SelectCommand="SELECT * FROM [Act]"></asp:SqlDataSource>
+                                        <asp:Button ID="Button3" runat="server" Text="查询" OnClick="Button3_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        <div id="TableStu" runat="server"></div>
+                        <br /><br />
                         <h3>学生平均成绩表</h3><br />
                         <div id="TableAvg" runat="server">
-
                         </div>
-
-                        <br /><br />
-                        <h3>按学生查询</h3><br />
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="stu_name" DataValueField="stu_id"></asp:DropDownList>
-
-                      
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ActManageConnectionString %>" SelectCommand="SELECT * FROM [Stu]"></asp:SqlDataSource>
-                        <asp:Button ID="Button2" runat="server" Text="查询" OnClick="Button2_Click" />
-                        <div id="TableStu" runat="server"></div>
-
-                        <br /><br />
-                        <h3>按活动查询</h3><br />
-                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="act_name" DataValueField="act_id"></asp:DropDownList>
-                      
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ActManageConnectionString %>" SelectCommand="SELECT * FROM [Act]"></asp:SqlDataSource>
-                        <asp:Button ID="Button3" runat="server" Text="查询" OnClick="Button3_Click" />
                         <div id="TableAct" runat="server"></div>
-                      
                     </div>
                 </div>
-
-
             </main>
             <footer class="footer" role="contentinfo">
                 <div class="container">
 
                     <div class="row justify-content-center text-center">
                         <div class="col-md-7">
-                            <p class="copyright">Copyright &copy; 2020. Zfz. All rights reserved.</p>
+                            <p class="copyright">Copyright © 2021 SunnySlopes. All Rights Reserved.</p>
                             <div class="credits">
                             </div>
                         </div>

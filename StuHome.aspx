@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>学生端首页</title>
+    <title>学生首页</title>
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
@@ -45,7 +45,7 @@
                     <div class="row align-items-center">
 
                         <div class="col-6 col-lg-2">
-                            <h1 class="mb-0 site-logo"><a href="StuHome.aspx" class="mb-0">Web开发技术</a></h1>
+                            <h1 class="mb-0 site-logo"><a href="StuHome.aspx" class="mb-0">Web开发课程大作业</a></h1>
                         </div>
 
                         <div class="col-12 col-md-10 d-none d-lg-block">
@@ -91,7 +91,7 @@
                             <div class="col-12">
                                 <div class="row justify-content-center">
                                     <div class="col-md-7 text-center hero-text">
-                                        <h1 data-aos="fade-up" data-aos-delay="">学生端首页</h1>
+                                        <h1 data-aos="fade-up" data-aos-delay="">学生首页</h1>
                                         <p class="mb-5" data-aos="fade-up" data-aos-delay="100" id="TeaName" runat="server">欢迎您，123！</p>
                                         <asp:Button ID="Button1" runat="server" OnClick="Logout" Text="退出" />
                                     </div>
@@ -99,43 +99,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-
                 <div class="site-section">
                     <div class="container">
-
-
-                        <div>
-                            <h3>友情提醒
-                                
-
-                            </h3>
-                            <small>
-                                <input type="button" value="隐藏" id="1" />
-                                <input type="button" value="显示" id="2" />
-                            </small>
-                            <div id="tx">
-                                <div>
-                                    <span id="myTime">现在是20xx年x月x日</span>
-                                    <span id="myClock">00:00:00</span>
-                                    <span>，请注意合理安排作息哦！</span><br />
-                                    <br />
-                                </div>
-                                <h5>今日上海天气</h5>
-                                温度：<span id="no1">温度</span><br />
-                                天气：<span id="no2">天气</span><br />
-                                <span id="no3">提醒</span><br />
-                            </div>
-                            
-                        </div>
                         <div>
                             <br />
                             <h3>提交作业</h3>
                             <br />
-                            <table class='table table-bordered table-hover'>
+                            <table class='table table-bordered table-hover  table-striped'>
                                 <tr>
                                     <td>作业编号</td>
                                     <td>
@@ -177,7 +148,7 @@
 
                     <div class="row justify-content-center text-center">
                         <div class="col-md-7">
-                            <p class="copyright">Copyright &copy; 2020. Zfz. All rights reserved.</p>
+                            <p class="copyright">Copyright © 2021 SunnySlopes. All Rights Reserved.</p>
                             <div class="credits">
                             </div>
                         </div>

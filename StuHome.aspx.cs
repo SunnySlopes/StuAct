@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class StuHome : System.Web.UI.Page
 {
@@ -27,7 +22,7 @@ public partial class StuHome : System.Web.UI.Page
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataReader dr = cmd.ExecuteReader();
-            TableStu.InnerHtml = "<table class='table table-striped table-bordered table-hover'><tr><th>活动序号</th><th>活动类型</th><th>活动名称</th><th>分数</th><th>备注</th></tr>";
+            TableStu.InnerHtml = "<table class='table table-striped table-bordered table-hover'><tr><th>作业序号</th><th>作业类型</th><th>作业名称</th><th>分数</th><th>备注</th></tr>";
             while (dr.Read())
             {
                 TableStu.InnerHtml += "<tr><td>" + dr.GetInt32(1).ToString() + "</td><td>" + dr.GetString(6) + "</td><td>" + dr.GetString(7) + "</td><td>" + dr.GetInt32(3).ToString() + "</td><td>" + dr.GetString(4) + "</td></tr>";
